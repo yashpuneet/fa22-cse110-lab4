@@ -30,3 +30,13 @@
    declaration in this code limits result's scope to the if block and the
    console.log statement on line 13 falls outside this code block thus is not
    able to reference the variable to print its value.
+
+### const declaration
+
+5. Nothing is printed on line 9 since the code exits with a Type error on line 7
+   before it reaches this line. result is a constant and the
+   function attempts to change its value in ine 7 which results in teh Type
+   Error.
+
+6. This is a similar situation to question 5. Nothing is printed because the
+   code exits with a Type error before reaching line 13 due to an attempt to change the value of the constant result in line 7.
