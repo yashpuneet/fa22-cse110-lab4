@@ -31,7 +31,7 @@
    returns the array `[50, 100, 150]`.
 
 5. Line 12 causes a Reference error to occur since the iteration variable `i` is
-   not accessible at line 12. Being declared using `let`, the iteraction
+   not accessible at line 12. Being declared using `let`, the iteration
    variable can have block scope and since it is declared in teh for loop, its
    block is the for loop. Since the `console.log()` function lies outside the
    for loop, the iteraton variable `i` canot be accessed by it.
@@ -49,3 +49,23 @@
    accessed by it and its value is printed to the console. This value was
    calculated in question 3 and is `150`. Line 14 therefore prints `150` to the
    console.
+
+8. The function still returns an array of diuscounted prices much like question
+   4 . Even though teh variable declarations changed from `var` to `let`, this 
+   did not cause any scope reference errors for calculations as these exist
+   within the for loop code block. Therefore, for the same reasons as question
+   4, the function returns the array `[50, 100, 150]`.
+
+9. Line 11 returns a reference error much like question question 5 . The `let`
+   variable declaration gives i block scope limited to teh for loop thus teh
+   `console.log()` statement on line 12 is not able to access `i` to print its
+   value resulting in a Reference error. 
+
+10.  Line 12 prints out the number of elements in the input array `prices`. This is beacouse length is declared as a constant and set to the legth of teh array. This value has function scope and since, the `console.log()` statement is within the function it is able to print teh value of `length` to teh concole. Therefore, teh value printed in `3`.
+
+11. The  funtion will return an array of discounted prices. Even though
+	discountedPrice is declared as a constant, it has block scope and is thus
+	redeclared every iteration. Due to this, it is never actually changed across
+	iteratiosn since it is essentially out-of-scope and inaccessible after each
+	iteration and then redeclared at the beginning of the next iterations. The
+	output is therefore the array `[50, 100, 150]`.
