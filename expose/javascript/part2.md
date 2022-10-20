@@ -1,5 +1,7 @@
 # Part 2. A Little More of a Challenge...
 
+### Declarations
+
 1. Line 12 prints out the number of elements in the passed array `prices`. This
    is done by printing the final value of the for loop iteration variable `i`
    which caused the for loop to exit. Since the iteration variable `i` is
@@ -69,3 +71,12 @@
 	iteratiosn since it is essentially out-of-scope and inaccessible after each
 	iteration and then redeclared at the beginning of the next iterations. The
 	output is therefore the array `[50, 100, 150]`.
+
+### Datatypes
+
+12. 
+	A. student.name
+	B. student["Grad Year"]
+	C. student.greeting()
+	D. student["Favorite Teacher"].name
+	E. student.courseLoad[0]
