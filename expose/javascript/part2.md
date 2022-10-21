@@ -80,3 +80,101 @@
 	C. student.greeting()
 	D. student["Favorite Teacher"].name
 	E. student.courseLoad[0]
+
+### Arithmetic
+
+13.
+	A. '3' + 2 = '32' 
+		- To allow string concatenation, the integer 2 is converetd to a string
+
+	B. '3' - 2 = 1
+		- Since - does not define any string operation, the string is converted
+		  to an integer instead to allow the numerical subtraction operation
+
+	C. 3 + null = 3
+		- The + here is respresenting teh numerical addition opertaion since
+		  there is no string present. This results in null being converted to 0
+
+	D. '3' + null = '3null'
+		- The + here resresets string concatenation, thus null is converted to
+		  teh string "null"
+
+	E. true + 3 = 4
+		- The + here represents numerical addition. The boolean value true us thus
+		  converetd to its numerical representation of 1
+
+	F. false + null = 0
+		- The + here represents the addition operation. To allow this, the boolean
+		  false is converted to its numerical representation, 0, and null is also
+		  converted to its numerical representation, 0.
+
+	G. '3' + undefined = '3undefined'
+		- The + here represents the string concatenation operation. undefined is
+		  converted to a string, "undefined" to allow this operation.
+
+	H. '3' - undefined = NaN
+		- This results NaN or Not-a-Number because the - operation is not
+		  defined for string types and undefined does not have a numerical
+		  representation (it is represented as NaN if required to be a numeral)
+		  this resulting in an undefiend operation.
+
+### Comparison
+
+14. 
+	A. '2' > 1 = true
+		- The string, '2' is convereted to a number and is compared to the
+		  number 1. Since 2 is greater than 1, this returns true.
+
+	B. '2' < '12' = false
+		- This returns false since strings comparions are done character by
+		  character. This, therfore, comapres the characters '2' and '1' first
+		  and since '2' is not less than '1', it returns false.
+
+	C. 2 == '2' = true
+		- The string '2' is converted to a number and when compared with the
+		  integer, 2, it is equal thus returning true.
+
+	D. 2 === '2' = false
+		- The strict equality operator does not allow type conversions and since
+		  2 and '2' are different datatypes, they are not equal and thus the
+		  comparison returns false.
+
+	E. true == 2 = false
+		- true in numeral representation is 1. Since 1 is not equal to 2, this
+		  returns false.
+
+	F. true === Boolean(2) = true
+		- The `Boolean()` function converts all non-empty values to true. Since
+		  2 is not an empty value, it is converted to true and thus the
+		  comparison returns false.
+
+15. The difference between teh two types of equality comparisons is that `==`
+	allows for type conversions whereas `===` is a strict equality and does not
+	allow type conversions. Therefore, two values which are of different
+	datatypes but could convert to the same value would be shown as equal by
+	`==` but not by `===`.
+
+### Functions
+
+17.  Calling the function as mentioned modifies the input array by multiplying
+	 each entry by 2 and returns a new array with these modified values. The for
+	 loop iterates through the input array, calls teh function `doSomething` for
+	 each element which returns the input element multiples by 2, and
+	 pushes it into the new Array.The returned value is `[2, 4, 6]`.
+
+### setInterval(), setTimeout(), clearTimeout()
+
+19. The output of the code is:
+	`1
+	3
+	4
+	2'
+
+	This is because as we enter the function, line 2 prints 1. Line 2 then sets
+	a 1 second timer to print 2 after the timer ends. The next two lines are run
+	before this timer ends so 2 is printed at the end. Line 4 uses the same
+	timeout function but sets this timeout to 0, effectively printing the value
+	immediately. Line 5 also prints 4 immediately thus resulting in the above
+	mentioned output.
+
+
